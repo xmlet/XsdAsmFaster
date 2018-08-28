@@ -1,6 +1,9 @@
 package org.xmlet.xsdasmfaster.classes;
 
-import org.objectweb.asm.*;
+import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.FieldVisitor;
+import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.Type;
 import org.xmlet.xsdparser.xsdelements.XsdAbstractElement;
 import org.xmlet.xsdparser.xsdelements.XsdAttribute;
 import org.xmlet.xsdparser.xsdelements.XsdElement;
@@ -73,7 +76,7 @@ class XsdAsmEnum {
         mVisitor.visitMaxs(3, 4);
         mVisitor.visitEnd();
 
-        mVisitor = cw.visitMethod(ACC_PUBLIC, "getValue", "()" + fullJavaTypeDesc, null, null);
+        mVisitor = cw.visitMethod(ACC_PUBLIC + ACC_FINAL, "getValue", "()" + fullJavaTypeDesc, null, null);
         mVisitor.visitCode();
         mVisitor.visitVarInsn(ALOAD, 0);
         mVisitor.visitFieldInsn(GETFIELD, enumType, "value", fullJavaTypeDesc);
