@@ -266,7 +266,6 @@
         <dependency>
             <groupId>com.github.xmlet</groupId>
             <artifactId>xsdParser</artifactId>
-            <!--version>1.0.12-snapshot</version-->
             <version>1.0.12</version>
         </dependency>
     </dependencies>
