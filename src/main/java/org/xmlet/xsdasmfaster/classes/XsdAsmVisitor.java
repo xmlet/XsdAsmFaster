@@ -86,6 +86,18 @@ class XsdAsmVisitor {
         mVisitor.visitMaxs(0, 1);
         mVisitor.visitEnd();
 
+        mVisitor = classWriter.visitMethod(ACC_PUBLIC, "visitOpenAsync", "()V", null, null);
+        mVisitor.visitCode();
+        mVisitor.visitInsn(RETURN);
+        mVisitor.visitMaxs(0, 1);
+        mVisitor.visitEnd();
+
+        mVisitor = classWriter.visitMethod(ACC_PUBLIC, "visitCloseAsync", "()V", null, null);
+        mVisitor.visitCode();
+        mVisitor.visitInsn(RETURN);
+        mVisitor.visitMaxs(0, 1);
+        mVisitor.visitEnd();
+
         elementNames.forEach(elementName -> addVisitorParentMethod(classWriter, elementName, apiName));
 
         elementNames.forEach(elementName -> addVisitorElementMethod(classWriter, elementName, apiName));

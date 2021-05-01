@@ -203,6 +203,25 @@ class XsdAsmElements {
         mVisitor.visitMaxs(2, 2);
         mVisitor.visitEnd();
 
+        mVisitor = classWriter.visitMethod(ACC_PUBLIC + ACC_FINAL, "async", "(Ljava/util/function/BiConsumer;)" + classTypeDesc, "(Ljava/util/function/BiConsumer<Ljava/lang/Runnable;L" + classType + "<TZ;>;>;)L" + classType + "<TZ;>;", null);
+        mVisitor.visitCode();
+        mVisitor.visitVarInsn(ALOAD, 0);
+        mVisitor.visitFieldInsn(GETFIELD, classType, "visitor", elementVisitorTypeDesc);
+        mVisitor.visitMethodInsn(INVOKEVIRTUAL, elementVisitorType, "visitOpenAsync", "()V", false);
+        mVisitor.visitVarInsn(ALOAD, 1);
+        mVisitor.visitVarInsn(ALOAD, 0);
+        mVisitor.visitFieldInsn(GETFIELD, classType, "visitor", elementVisitorTypeDesc);
+        mVisitor.visitInsn(DUP);
+        mVisitor.visitMethodInsn(INVOKEVIRTUAL, JAVA_OBJECT, "getClass", "()Ljava/lang/Class;", false);
+        mVisitor.visitInsn(POP);
+        mVisitor.visitInvokeDynamicInsn("run", "(" + elementVisitorTypeDesc + ")Ljava/lang/Runnable;", new Handle(Opcodes.H_INVOKESTATIC, "java/lang/invoke/LambdaMetafactory", "metafactory", "(Ljava/lang/invoke/MethodHandles$Lookup;" + JAVA_STRING_DESC + "Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;", false), Type.getType("()V"), new Handle(Opcodes.H_INVOKEVIRTUAL, elementVisitorType, "visitCloseAsync", "()V", false), Type.getType("()V"));
+        mVisitor.visitVarInsn(ALOAD, 0);
+        mVisitor.visitMethodInsn(INVOKEINTERFACE, "java/util/function/BiConsumer", "accept", "(" + JAVA_OBJECT_DESC + JAVA_OBJECT_DESC + ")V", true);
+        mVisitor.visitVarInsn(ALOAD, 0);
+        mVisitor.visitInsn(ARETURN);
+        mVisitor.visitMaxs(3, 2);
+        mVisitor.visitEnd();
+
         mVisitor = classWriter.visitMethod(ACC_PUBLIC + ACC_FINAL, "of", "(Ljava/util/function/Consumer;)" + classTypeDesc, "(Ljava/util/function/Consumer<L" + classType + "<TZ;>;>;)L" + classType + "<TZ;>;", null);
         mVisitor.visitLocalVariable("consumer", "Ljava/util/function/Consumer;", null, new Label(), new Label(),1);
         mVisitor.visitCode();

@@ -559,3 +559,27 @@ class XsdAsmFasterBinding{
     Some examples presented here are simplified in order to give a better understanding of how this library works.
 </div>
  
+ ## Changelog
+ 
+ ### 1.0.6
+ 
+ <div align="justify">
+     <ul>
+         <li>
+             Added two new methods to ElementVisitor, visitOpenAsync and visitCloseAsync, to allow asynchronous operations.
+         </li>
+         <li>
+             Added an async method to all Elements.
+         </li>
+     </ul>
+ </div>
+ 
+ ### 1.0.5
+ 
+ <div align="justify">
+     <ul>
+         <li>
+             First usable version.
+         </li>
+     </ul>
+ </div>
