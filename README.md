@@ -566,7 +566,7 @@ class XsdAsmFasterBinding{
  <div align="justify">
      <ul>
          <li>
-             <a href="https://github.com/xmlet/XsdAsmFaster/issues/2" title="RestrictionValidator.validatePattern: invalid matching+ typo">Issue 2 - Details</a> - 
+             <a href="https://github.com/xmlet/XsdAsmFaster/issues/2" title="RestrictionValidator.validatePattern: invalid matching+ typo">Details</a> - 
                  Implemented fixes suggested by <a href="https://github.com/d6c8" title="Damien Carbonne">Damien Carbonne</a>.
          </li>
      </ul>
