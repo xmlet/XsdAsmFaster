@@ -36,7 +36,7 @@
 <dependency>
     <groupId>com.github.xmlet</groupId>
     <artifactId>xsdAsmFaster</artifactId>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
 </dependency>
 ``` 
 
@@ -560,6 +560,18 @@ class XsdAsmFasterBinding{
 </div>
  
  ## Changelog
+
+ ### 1.0.7
+ 
+ <div align="justify">
+     <ul>
+         <li>
+             <a href="https://github.com/xmlet/XsdAsmFaster/issues/2" title="RestrictionValidator.validatePattern: invalid matching+ typo">Issue 2 - RestrictionValidator.validatePattern: invalid matching + typo</a> - 
+                 Implemented fixes suggested by <a href="https://github.com/d6c8" title="Damien Carbonne">Damien Carbonne</a>.
+         </li>
+     </ul>
+ </div>
+ 
  
  ### 1.0.6
  
