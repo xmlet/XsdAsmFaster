@@ -10,7 +10,7 @@ public class XsdAsmBasicTest {
 
     /* Uncomment code for code coverage tests. The code is commented for faster development */
 
-    private static final String HTML_API_NAME = "htmlFaster";
+    private static final String HTML_API_NAME = "htmlapiaster";
 
     /*
     private static final String ANDROID_API_NAME = "androidFaster";

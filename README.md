@@ -561,6 +561,17 @@ class XsdAsmFasterBinding{
  
  ## Changelog
 
+ ### 1.0.8
+ 
+ <div align="justify">
+     <ul>
+         <li>
+             <a href="https://github.com/xmlet/HtmlFlow/issues/80" title="How to create a custom tag/element?">Details</a> - 
+                 Adds CustomElements for HtmlApiFaster/HtmlFlow.
+         </li>
+     </ul>
+ </div>
+
  ### 1.0.7
  
  <div align="justify">
